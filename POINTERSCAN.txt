@@ -1,0 +1,51 @@
+finding a pointer manually
+1. do a normal search for the memory area
+2. add to address list
+3. choose what accesses this address
+4. do something in game
+5. choose more information and find probable address
+6. find offset by looking at highlighted area in brackets
+7. do a new scan with probable address in hex - should be single return
+*. the process fails here - more than one address (~40) are returned
+8. enter manual address with scanned address on bottom and offset on top if not offset is zero
+9. choose what accesses the newly entered pointer
+*the process fails here as well:
+probable address refers back to original address that we just entered as hex
+
+finding a pointer automatically
+1. do a normal search for the memory area
+2. add to address list
+3. choose pointer scan for this address
+4. choose ok to scan
+5a. restart target program and do a normal search for the memory area
+5b. restart program and do nothing else
+7. choose pointer scan for this address
+8. close dialog and open results of previous search
+9a. choose rescan memory and enter address we just found
+9b. choose rescan memory and enter current value of target
+10. repeat this process several times
+11. repeat the entire process with a higher pointer depth level if pointers still change
+* the process fails here - with level 7 more than 120GB of disk space are used
+
+optimized automatic search
+1. find address
+2. make note of address
+3. save pointermap
+4. restart game
+5. find address
+6. make note of address
+7. save pointermap
+8. close game
+9. choose pointerscan with saved pointermap and choose smallest of 2 saved pointermaps
+10. use one of the addresses in the pointerscanner address field
+11. choose compare results with other saved pointer map and choose other saved pointermap
+12. use the other address here
+
+-----
+
+best way may not be to use pointers at all but instead scan once and increase your value to a large number and save so you do not have to scan again
+some games this is not possible because they may crash when the value is changed too high or even worse corrupt the savefile
+
+for example - in Empire: Total War money could be increased to a very large value and then the game saved without problems
+counterexample - in Consortium: The Tower the savefile was corrupted when stun grenade ammo was increased above 30
+

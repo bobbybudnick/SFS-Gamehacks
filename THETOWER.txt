@@ -1,0 +1,14 @@
+strategy for finding energy - successful / base pointer - successful
+unknown number
+double
+increase and decrease
+
+strategy for finding ammo - successful / base pointer - unsuccessful
+matching number
+double (did not truly change number) - is actually a 4 byte
+exact match
+
+level 7 scan uses more than 300GB space
+
+this is for the Alpha 1.2 rev 4554 Steam version of the game
+

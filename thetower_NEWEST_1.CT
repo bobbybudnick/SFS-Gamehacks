@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Energy"</Description>
+      <VariableType>Double</VariableType>
+      <Address>"thetower.exe"+0632DD40</Address>
+      <Offsets>
+        <Offset>54C</Offset>
+        <Offset>110</Offset>
+        <Offset>A0</Offset>
+        <Offset>38</Offset>
+        <Offset>608</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>Info about this table:
+</Comments>
+</CheatTable>

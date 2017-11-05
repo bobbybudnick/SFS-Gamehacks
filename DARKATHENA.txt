@@ -1,0 +1,50 @@
+found the correct double by unknown all down/up/unchanged and shooting and gathering ammo
+search for double even though the actual type may be 4 byte
+this narrowed down results to 30
+then process of elimination by toggling groups of addresses and seeing if ammo freeze is true by unfreezing and watching number change
+correct address should be first address found in list
+if not: you can find the correct address by adding your narrowed results to the list and converting all to 4 byte and looking for 6 digit number starting with 524
+
+another method is to search directly for 4 byte addresses for the shotgun for example 524000 and 525000 and the assault rifle 2490000 and 2491000
+this is because we know what numbers they start with now that we have done the first search
+
+-----
+shotgun
+double
+5.94161411836695E-313 - 36 rounds remaining
+1.90982211553293E-313 - 17 rounds remaining
+1.48542295709284E-313 - 9 rounds remaining
+2.59035159655045E-318 - 5 rounds remaining
+2.59033677458107E-318 - 2 rounds remaining
+
+the number may be a 4 byte instead of a double
+36 rounds with 5 in the chamber - 6.57821285550831E-313 - 524293
+9 rounds with 2 in the chamber - 1.48542295709284E-313 - 524290
+this means it is almost certainly a 4 byte - yet the scanner showed it as a double
+-----
+-----
+assault rifle
+same double search and convert to 4 byte as shotgun
+109 rounds with 33 in the chamber - 2490401
+-----
+-----
+health
+found by touching restricted weapon for damage and searching for unknown all up and down
+4 bytes
+4194368 - 4 full blocks
+4194354 - fourth health block almost depleted
+4194352 - 3 full blocks
+-----
+
+the current pointer seems valid for first checkpoint in tunnel under starting area
+adding numbers to the scanned number (524*** for shotgun/249*** for assault rifle) increases amount of ammo by the number added
+eventually the pointer/address will disappear so add as much ammo and do a checkpoint save while you can
+if the pointer/address disappears you will have to rescan
+
+pointers do not work in terms of ongoing game play because a new address is used every time ammo is picked up
+pointers do work in terms of restoring game play to a checkpoint because they stay the same until ammo is picked up
+so the method of increasing ammo to a large amount while you do have an address is the way to go
+this is in the intro only - pointers don't seem to work at all in the actual game - just increase your value to a large number and get to checkpoint
+
+this is for the 1.0.0.1 GOG version of the game
+
